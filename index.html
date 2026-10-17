@@ -44,179 +44,179 @@
         };
     </script>
 </head>
-<body class="relative min-h-screen overflow-x-hidden bg-canvas font-body text-slate border-4 sm:border-[12px] border-canvas">
+<body class="relative min-h-screen overflow-x-hidden bg-canvas font-body text-slate border-0 sm:border-[12px] border-canvas">
 
     <!-- Marginalia -->
     <div class="fixed z-50 pointer-events-none font-hand text-2xl opacity-80 top-1/2 left-2 origin-left -rotate-90 -translate-y-1/2 whitespace-nowrap hidden md:block">October 2026 &mdash; Bold Patterns</div>
     <div class="fixed z-50 pointer-events-none font-hand text-2xl opacity-80 top-1/2 right-2 origin-right rotate-90 -translate-y-1/2 whitespace-nowrap hidden md:block">Our Memories in Auckland &mdash; Bold Patterns</div>
 
-    <!-- Top nav -->
-    <nav class="absolute top-0 inset-x-0 z-40 flex flex-wrap justify-center md:justify-end gap-2 sm:gap-3 px-4 sm:px-6 md:px-16 lg:px-24 pt-4 sm:pt-6">
-        <a href="#gallery" class="bg-ochre text-slate font-display font-bold text-xs sm:text-base px-3.5 py-1.5 sm:px-6 sm:py-2 border-2 border-slate shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-white hover:-translate-y-0.5 transition-all [clip-path:polygon(5%_0,100%_5%,95%_100%,0_95%)]">Curated Favourites</a>
-        <a href="#lightbox-gallery" class="bg-terracotta text-white font-display font-bold text-xs sm:text-base px-3.5 py-1.5 sm:px-6 sm:py-2 border-2 border-slate shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-slate hover:-translate-y-0.5 transition-all [clip-path:polygon(0_5%,96%_0,100%_95%,4%_100%)]">Lightbox Gallery</a>
-        <a href="#rooms" class="bg-blue-light text-white font-display font-bold text-xs sm:text-base px-3.5 py-1.5 sm:px-6 sm:py-2 border-2 border-slate shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-blue-dark hover:-translate-y-0.5 transition-all [clip-path:polygon(0_5%,95%_0,100%_95%,5%_100%)]">The Rooms</a>
-        <a href="#about" class="bg-slate text-white font-display font-bold text-xs sm:text-base px-3.5 py-1.5 sm:px-6 sm:py-2 border-2 border-slate shadow-[3px_3px_0_#c45a42] sm:shadow-[4px_4px_0_#c45a42] hover:bg-gray-700 hover:-translate-y-0.5 transition-all [clip-path:polygon(5%_0,100%_5%,95%_100%,0_95%)]">About</a>
+    <!-- Top nav: sticky single-row bar on mobile, floating Cubist pills on desktop -->
+    <nav class="sticky top-0 md:absolute inset-x-0 z-40 bg-canvas/95 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border-b-2 border-slate md:border-none flex items-center justify-between md:justify-end gap-1.5 sm:gap-3 px-3 sm:px-6 md:px-16 lg:px-24 py-2.5 sm:py-3 md:pt-6 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <a href="#gallery" class="shrink-0 whitespace-nowrap bg-ochre text-slate font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-white md:hover:-translate-y-0.5 transition-all [clip-path:polygon(3%_0,100%_4%,97%_100%,0_96%)]">Curated Favourites</a>
+        <a href="#lightbox-gallery" class="shrink-0 whitespace-nowrap bg-terracotta text-white font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-slate md:hover:-translate-y-0.5 transition-all [clip-path:polygon(0_4%,97%_0,100%_96%,3%_100%)]">Lightbox Gallery</a>
+        <a href="#rooms" class="shrink-0 whitespace-nowrap bg-blue-light text-white font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-blue-dark md:hover:-translate-y-0.5 transition-all [clip-path:polygon(0_4%,97%_0,100%_96%,3%_100%)]">15 Rooms</a>
+        <a href="#about" class="shrink-0 whitespace-nowrap bg-slate text-white font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#c45a42] sm:shadow-[4px_4px_0_#c45a42] hover:bg-gray-700 md:hover:-translate-y-0.5 transition-all [clip-path:polygon(3%_0,100%_4%,97%_100%,0_96%)]">About</a>
     </nav>
 
     <!-- HERO -->
-    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 md:px-16 lg:px-24 pt-24 sm:pt-28 lg:pt-24 pb-16 sm:pb-20">
+    <section id="hero" class="relative lg:min-h-screen flex items-center overflow-hidden px-4 sm:px-6 md:px-16 lg:px-24 pt-6 sm:pt-12 md:pt-28 lg:pt-24 pb-12 sm:pb-16 lg:pb-20">
         <!-- Cubist shapes (parallax targets) -->
         <div class="absolute inset-0 pointer-events-none">
-            <div data-parallax class="absolute bg-blue-dark w-[75vw] sm:w-[55vw] h-[55vh] sm:h-[75vh] -top-10 right-0 sm:right-[5vw] opacity-20 lg:opacity-100 [clip-path:polygon(20%_0%,100%_0,80%_100%,0%_100%)]"></div>
-            <div data-parallax data-base="rotate(30deg)" class="absolute bg-terracotta w-52 h-52 sm:w-80 sm:h-80 -top-24 left-[40vw] rotate-[30deg] opacity-35 lg:opacity-100 [border-radius:40%_60%_70%_30%/40%_50%_60%_50%]"></div>
-            <div data-parallax class="absolute bg-ochre w-40 h-48 sm:w-52 sm:h-64 bottom-16 left-[3vw] opacity-35 lg:opacity-100 [clip-path:polygon(0_20%,100%_0,90%_100%,10%_80%)]"></div>
-            <div data-parallax class="absolute bg-olive w-52 h-52 sm:w-72 sm:h-72 bottom-0 right-[20vw] sm:right-[30vw] [clip-path:polygon(10%_0,100%_15%,85%_100%,0_85%)] opacity-35 lg:opacity-90"></div>
+            <div data-parallax class="absolute bg-blue-dark w-[75vw] sm:w-[55vw] h-[55vh] sm:h-[75vh] -top-10 right-0 sm:right-[5vw] opacity-15 lg:opacity-100 [clip-path:polygon(20%_0%,100%_0,80%_100%,0%_100%)]"></div>
+            <div data-parallax data-base="rotate(30deg)" class="absolute bg-terracotta w-52 h-52 sm:w-80 sm:h-80 -top-24 left-[40vw] rotate-[30deg] opacity-25 lg:opacity-100 [border-radius:40%_60%_70%_30%/40%_50%_60%_50%]"></div>
+            <div data-parallax class="absolute bg-ochre w-40 h-48 sm:w-52 sm:h-64 bottom-16 left-[3vw] opacity-25 lg:opacity-100 [clip-path:polygon(0_20%,100%_0,90%_100%,10%_80%)]"></div>
+            <div data-parallax class="absolute bg-olive w-52 h-52 sm:w-72 sm:h-72 bottom-0 right-[20vw] sm:right-[30vw] [clip-path:polygon(10%_0,100%_15%,85%_100%,0_85%)] opacity-25 lg:opacity-90"></div>
         </div>
 
-        <div class="relative z-10 w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-14 items-center">
+        <div class="relative z-10 w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-14 items-center">
             <div class="relative z-30">
-                <p class="font-hand text-2xl sm:text-3xl text-terracotta mb-2 -rotate-1">Auckland Art Gallery Toi o Tāmaki &middot; our visit, 17 Oct 2026</p>
-                <h1 class="relative z-30 font-display font-extrabold text-5xl sm:text-7xl lg:text-8xl xl:text-9xl tracking-tight leading-[0.9] [text-shadow:4px_4px_0_#f7f3e8]">PICASSO:</h1>
-                <h2 class="relative z-30 font-display font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mt-2 sm:mt-3">Designed by Paul Smith</h2>
-                <p class="mt-4 sm:mt-6 max-w-lg text-base sm:text-lg leading-relaxed">
+                <p class="font-hand text-xl sm:text-3xl text-terracotta mb-1.5 sm:mb-2 -rotate-1">Auckland Art Gallery Toi o Tāmaki &middot; our visit, 17 Oct 2026</p>
+                <h1 class="relative z-30 font-display font-extrabold text-[3.25rem] sm:text-7xl lg:text-8xl xl:text-9xl tracking-tight leading-[0.9] [text-shadow:3px_3px_0_#f7f3e8] sm:[text-shadow:4px_4px_0_#f7f3e8]">PICASSO:</h1>
+                <h2 class="relative z-30 font-display font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mt-1.5 sm:mt-3">Designed by Paul Smith</h2>
+                <p class="mt-3 sm:mt-6 max-w-lg text-sm sm:text-lg leading-relaxed">
                     Fifteen rooms, fifteen moods. Sir Paul Smith floods each of Picasso&rsquo;s periods with its own colour, pattern and texture &mdash; and we wandered through all of it.
                 </p>
-                <div class="flex items-center gap-3 sm:gap-4 mt-5 sm:mt-6">
-                    <div class="h-1 w-10 sm:w-16 bg-slate"></div>
-                    <p class="font-display font-semibold text-base sm:text-xl uppercase tracking-wider">10 Oct 2026 &ndash; 1 Feb 2027</p>
+                <div class="flex items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
+                    <div class="h-1 w-8 sm:w-16 bg-slate"></div>
+                    <p class="font-display font-semibold text-xs sm:text-xl uppercase tracking-wider">10 Oct 2026 &ndash; 1 Feb 2027</p>
                 </div>
 
-                <div class="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8">
-                    <a href="#gallery" class="bg-terracotta text-white font-display font-bold text-sm sm:text-lg px-6 py-3 sm:px-8 sm:py-3.5 xl:px-9 xl:py-4 hover:bg-slate hover:-translate-y-0.5 transition-all shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">Curated Favourites</a>
-                    <a href="#lightbox-gallery" class="bg-ochre text-slate font-display font-bold text-sm sm:text-lg px-6 py-3 sm:px-8 sm:py-3.5 xl:px-9 xl:py-4 border-2 border-slate hover:bg-white hover:-translate-y-0.5 transition-all shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(2%_4%,98%_0,100%_96%,0_100%)]">Lightbox Gallery</a>
-                    <a href="#rooms" class="bg-white text-slate font-display font-bold text-sm sm:text-lg px-6 py-3 sm:px-8 sm:py-3.5 xl:px-9 xl:py-4 border-2 border-slate hover:bg-ochre hover:-translate-y-0.5 transition-all shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526]">Explore the 15 rooms</a>
+                <div class="grid grid-cols-2 sm:flex sm:flex-wrap gap-2.5 sm:gap-4 mt-5 sm:mt-8">
+                    <a href="#gallery" class="bg-terracotta text-white font-display font-bold text-xs sm:text-lg px-4 py-3 sm:px-8 sm:py-3.5 xl:px-9 xl:py-4 text-center hover:bg-slate md:hover:-translate-y-0.5 transition-all shadow-[4px_4px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">Curated Favourites</a>
+                    <a href="#lightbox-gallery" class="bg-ochre text-slate font-display font-bold text-xs sm:text-lg px-4 py-3 sm:px-8 sm:py-3.5 xl:px-9 xl:py-4 text-center border-2 border-slate hover:bg-white md:hover:-translate-y-0.5 transition-all shadow-[4px_4px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(2%_4%,98%_0,100%_96%,0_100%)]">Lightbox Gallery</a>
+                    <a href="#rooms" class="col-span-2 sm:col-auto bg-white text-slate font-display font-bold text-xs sm:text-lg px-4 py-3 sm:px-8 sm:py-3.5 xl:px-9 xl:py-4 text-center border-2 border-slate hover:bg-ochre md:hover:-translate-y-0.5 transition-all shadow-[4px_4px_0_#242526] sm:shadow-[6px_6px_0_#242526]">Explore the 15 rooms</a>
                 </div>
 
-                <dl class="mt-8 sm:mt-10 grid grid-cols-3 gap-3 sm:gap-4 max-w-md font-display">
-                    <div class="border-l-4 border-terracotta pl-2.5 sm:pl-3"><dt class="text-3xl sm:text-4xl font-extrabold leading-none" data-count="15">15</dt><dd class="text-[11px] sm:text-xs uppercase tracking-widest mt-1">Rooms</dd></div>
-                    <div class="border-l-4 border-ochre pl-2.5 sm:pl-3"><dt class="text-3xl sm:text-4xl font-extrabold leading-none" id="stat-photos">&ndash;</dt><dd class="text-[11px] sm:text-xs uppercase tracking-widest mt-1">Our photos</dd></div>
-                    <div class="border-l-4 border-blue-light pl-2.5 sm:pl-3"><dt class="text-3xl sm:text-4xl font-extrabold leading-none">1</dt><dd class="text-[11px] sm:text-xs uppercase tracking-widest mt-1">Designer</dd></div>
+                <dl class="mt-6 sm:mt-10 grid grid-cols-3 gap-2.5 sm:gap-4 max-w-md font-display bg-canvas/80 sm:bg-transparent p-2.5 sm:p-0 border border-slate/15 sm:border-none">
+                    <div class="border-l-4 border-terracotta pl-2.5 sm:pl-3"><dt class="text-2xl sm:text-4xl font-extrabold leading-none" data-count="15">15</dt><dd class="text-[10px] sm:text-xs uppercase tracking-widest mt-1">Rooms</dd></div>
+                    <div class="border-l-4 border-ochre pl-2.5 sm:pl-3"><dt class="text-2xl sm:text-4xl font-extrabold leading-none" id="stat-photos">&ndash;</dt><dd class="text-[10px] sm:text-xs uppercase tracking-widest mt-1">Our photos</dd></div>
+                    <div class="border-l-4 border-blue-light pl-2.5 sm:pl-3"><dt class="text-2xl sm:text-4xl font-extrabold leading-none">1</dt><dd class="text-[10px] sm:text-xs uppercase tracking-widest mt-1">Designer</dd></div>
                 </dl>
             </div>
 
             <!-- Hero photo collage (exact 3:4 portrait ratio matching IMG_6326) -->
-            <div id="hero-collage" class="relative z-10 aspect-[3/4] w-full max-w-[300px] sm:max-w-[380px] md:max-w-[430px] lg:max-w-[450px] xl:max-w-[490px] mx-auto lg:ml-auto my-4 lg:my-0"></div>
+            <div id="hero-collage" class="relative z-10 aspect-[3/4] w-[82vw] max-w-[310px] sm:max-w-[380px] md:max-w-[430px] lg:max-w-[450px] xl:max-w-[490px] mx-auto lg:ml-auto my-3 sm:my-4 lg:my-0"></div>
         </div>
 
         <!-- Paul Smith-style stripe band -->
-        <div class="absolute bottom-0 inset-x-0 h-4 flex" aria-hidden="true">
+        <div class="absolute bottom-0 inset-x-0 h-3 sm:h-4 flex" aria-hidden="true">
             <i class="flex-1 bg-terracotta"></i><i class="flex-1 bg-white"></i><i class="flex-1 bg-blue-dark"></i><i class="flex-1 bg-ochre"></i><i class="flex-1 bg-olive"></i><i class="flex-1 bg-[#d63b8a]"></i><i class="flex-1 bg-[#1d2f5c]"></i><i class="flex-1 bg-[#f2c230]"></i>
         </div>
     </section>
 
     <!-- Ticker of room moods -->
-    <div class="overflow-hidden bg-slate text-canvas py-3 border-y-4 border-ochre" aria-hidden="true">
+    <div class="overflow-hidden bg-slate text-canvas py-2.5 sm:py-3 border-y-4 border-ochre" aria-hidden="true">
         <div id="ticker" class="flex w-max animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-widest text-xs sm:text-sm"></div>
     </div>
 
     <main>
         <!-- About / the big ideas -->
-        <section id="about" class="px-4 sm:px-6 md:px-16 lg:px-24 py-12 sm:py-16">
-            <div class="grid lg:grid-cols-5 gap-8 sm:gap-10 items-start">
-                <div class="lg:col-span-2 bg-white/90 backdrop-blur-sm p-6 sm:p-8 border-2 border-slate border-l-8 border-l-terracotta shadow-[6px_6px_0_#242526] sm:shadow-[8px_8px_0_#242526] [clip-path:polygon(0_2%,98%_0,100%_98%,2%_100%)]">
-                    <h3 class="font-display font-bold text-2xl sm:text-3xl mb-3">Our Auckland Art Gallery Visit</h3>
+        <section id="about" class="px-4 sm:px-6 md:px-16 lg:px-24 py-10 sm:py-16">
+            <div class="grid lg:grid-cols-5 gap-6 sm:gap-10 items-start">
+                <div class="lg:col-span-2 bg-white/90 backdrop-blur-sm p-5 sm:p-8 border-2 border-slate border-l-8 border-l-terracotta shadow-[5px_5px_0_#242526] sm:shadow-[8px_8px_0_#242526] [clip-path:polygon(0_2%,98%_0,100%_98%,2%_100%)]">
+                    <h3 class="font-display font-bold text-xl sm:text-3xl mb-2.5 sm:mb-3">Our Auckland Art Gallery Visit</h3>
                     <p class="text-sm sm:text-base leading-relaxed">
                         The Auckland Art Gallery's innovative approach to this exhibition showcases "Picasso: Designed by Paul Smith". A deeply personal and curated experience, merging raw geometric forms with bold, contemporary patterns that transform the viewer's experience.
                     </p>
-                    <p class="font-hand text-2xl text-terracotta mt-4">&mdash; Brian &amp; Monya</p>
+                    <p class="font-hand text-2xl text-terracotta mt-3 sm:mt-4">&mdash; Brian &amp; Monya</p>
                 </div>
 
-                <div class="lg:col-span-3 grid sm:grid-cols-3 gap-5 sm:gap-6">
-                    <article data-reveal class="bg-blue-dark text-white p-5 sm:p-6 border-2 border-slate shadow-[6px_6px_0_#242526] sm:shadow-[8px_8px_0_#242526] hover:-translate-y-1.5 transition-all duration-300 [clip-path:polygon(0_0,100%_3%,97%_100%,3%_97%)]">
-                        <p class="font-display text-4xl sm:text-5xl font-extrabold text-ochre">1</p>
-                        <h4 class="font-display font-bold text-lg sm:text-xl mt-2">Colour flooding</h4>
-                        <p class="text-sm mt-2 text-white/85 leading-relaxed">Periods become walls: inky blue for melancholy, magenta for the Pink Ladies, charcoal for wartime, forest green for the late years.</p>
+                <div class="lg:col-span-3 grid sm:grid-cols-3 gap-4 sm:gap-6">
+                    <article data-reveal class="bg-blue-dark text-white p-5 sm:p-6 border-2 border-slate shadow-[5px_5px_0_#242526] sm:shadow-[8px_8px_0_#242526] md:hover:-translate-y-1.5 transition-all duration-300 [clip-path:polygon(0_0,100%_3%,97%_100%,3%_97%)]">
+                        <p class="font-display text-3xl sm:text-5xl font-extrabold text-ochre">1</p>
+                        <h4 class="font-display font-bold text-lg sm:text-xl mt-1.5 sm:mt-2">Colour flooding</h4>
+                        <p class="text-xs sm:text-sm mt-1.5 sm:mt-2 text-white/85 leading-relaxed">Periods become walls: inky blue for melancholy, magenta for the Pink Ladies, charcoal for wartime, forest green for the late years.</p>
                     </article>
-                    <article data-reveal class="bg-terracotta text-white p-5 sm:p-6 sm:mt-8 border-2 border-slate shadow-[6px_6px_0_#242526] sm:shadow-[8px_8px_0_#242526] hover:-translate-y-1.5 transition-all duration-300 [clip-path:polygon(3%_3%,100%_0,97%_97%,0_100%)]">
-                        <p class="font-display text-4xl sm:text-5xl font-extrabold text-slate">2</p>
-                        <h4 class="font-display font-bold text-lg sm:text-xl mt-2">Pattern &amp; motif</h4>
-                        <p class="text-sm mt-2 text-white/90 leading-relaxed">Signature Paul Smith stripes frame the striped sitters of the 1930s; a yellow-and-grey harlequin grid echoes Spanish bullfighting.</p>
+                    <article data-reveal class="bg-terracotta text-white p-5 sm:p-6 sm:mt-8 border-2 border-slate shadow-[5px_5px_0_#242526] sm:shadow-[8px_8px_0_#242526] md:hover:-translate-y-1.5 transition-all duration-300 [clip-path:polygon(3%_3%,100%_0,97%_97%,0_100%)]">
+                        <p class="font-display text-3xl sm:text-5xl font-extrabold text-slate">2</p>
+                        <h4 class="font-display font-bold text-lg sm:text-xl mt-1.5 sm:mt-2">Pattern &amp; motif</h4>
+                        <p class="text-xs sm:text-sm mt-1.5 sm:mt-2 text-white/90 leading-relaxed">Signature Paul Smith stripes frame the striped sitters of the 1930s; a yellow-and-grey harlequin grid echoes Spanish bullfighting.</p>
                     </article>
-                    <article data-reveal class="bg-olive text-white p-5 sm:p-6 border-2 border-slate shadow-[6px_6px_0_#242526] sm:shadow-[8px_8px_0_#242526] hover:-translate-y-1.5 transition-all duration-300 [clip-path:polygon(0_3%,97%_0,100%_97%,3%_100%)]">
-                        <p class="font-display text-4xl sm:text-5xl font-extrabold text-ochre">3</p>
-                        <h4 class="font-display font-bold text-lg sm:text-xl mt-2">Tactile worlds</h4>
-                        <p class="text-sm mt-2 text-white/85 leading-relaxed">Artificial grass underfoot for <em>Le D&eacute;jeuner sur l&rsquo;herbe</em>, vintage wallpapers for the collages, and walls flyposted with old exhibition posters.</p>
+                    <article data-reveal class="bg-olive text-white p-5 sm:p-6 border-2 border-slate shadow-[5px_5px_0_#242526] sm:shadow-[8px_8px_0_#242526] md:hover:-translate-y-1.5 transition-all duration-300 [clip-path:polygon(0_3%,97%_0,100%_97%,3%_100%)]">
+                        <p class="font-display text-3xl sm:text-5xl font-extrabold text-ochre">3</p>
+                        <h4 class="font-display font-bold text-lg sm:text-xl mt-1.5 sm:mt-2">Tactile worlds</h4>
+                        <p class="text-xs sm:text-sm mt-1.5 sm:mt-2 text-white/85 leading-relaxed">Artificial grass underfoot for <em>Le D&eacute;jeuner sur l&rsquo;herbe</em>, vintage wallpapers for the collages, and walls flyposted with old exhibition posters.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <div class="px-4 sm:px-6 md:px-16 lg:px-24 mb-4 relative z-20 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div class="px-4 sm:px-6 md:px-16 lg:px-24 mb-3 sm:mb-4 relative z-20 flex flex-row items-end justify-between gap-3">
             <div>
-                <h2 class="bg-terracotta text-white font-display font-bold text-2xl sm:text-3xl md:text-4xl leading-none px-6 sm:px-9 py-3.5 sm:py-4 inline-flex items-center justify-center shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">Curated Favourites</h2>
-                <p class="text-xs sm:text-sm mt-3 opacity-75">Swipe or use arrows to browse; tap any photo to open it full-screen and read its story.</p>
+                <h2 class="bg-terracotta text-white font-display font-bold text-xl sm:text-3xl md:text-4xl leading-none px-5 sm:px-9 py-3 sm:py-4 inline-flex items-center justify-center shadow-[4px_4px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">Curated Favourites</h2>
+                <p class="text-xs sm:text-sm mt-2.5 sm:mt-3 opacity-75">Swipe left or right to browse; tap any photo to open it full-screen.</p>
             </div>
-            <button type="button" data-refresh-gallery class="self-start sm:self-end bg-white text-slate font-display font-bold text-xs uppercase tracking-widest px-4 py-2.5 border-2 border-slate shadow-[4px_4px_0_#242526] hover:bg-ochre hover:-translate-y-0.5 transition-all">&#8635; Refresh Gallery</button>
+            <button type="button" data-refresh-gallery class="shrink-0 bg-white text-slate font-display font-bold text-[11px] sm:text-xs uppercase tracking-widest px-3 sm:px-4 py-2 sm:py-2.5 border-2 border-slate shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-ochre transition-all">&#8635; Refresh</button>
         </div>
 
-        <section id="gallery" class="relative flex flex-col justify-center bg-blue-dark pt-10 sm:pt-14 pb-12 sm:pb-16 px-2 sm:px-4 mt-6 sm:mt-8 min-h-[62vh] sm:min-h-[72vh] shadow-2xl [clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)]">
-            <div class="absolute bg-ochre w-[45vw] sm:w-[30vw] h-[110%] -top-[5%] left-[25vw] z-0 [clip-path:polygon(10%_0,100%_5%,90%_100%,0_95%)]"></div>
+        <section id="gallery" class="relative flex flex-col justify-center bg-blue-dark pt-6 sm:pt-14 pb-8 sm:pb-16 px-0 sm:px-4 mt-4 sm:mt-8 sm:min-h-[72vh] shadow-2xl [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] sm:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)]">
+            <div class="absolute bg-ochre w-[55vw] sm:w-[30vw] h-[110%] -top-[5%] left-[20vw] sm:left-[25vw] z-0 [clip-path:polygon(10%_0,100%_5%,90%_100%,0_95%)]"></div>
 
-            <!-- Left / Right floating carousel navigation buttons -->
-            <button id="gallery-prev" type="button" aria-label="Scroll gallery left" class="absolute left-2 sm:left-3 md:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-ochre text-slate hover:bg-terracotta hover:text-white font-display font-extrabold text-2xl sm:text-3xl border-2 border-slate shadow-[4px_4px_0_#242526] sm:shadow-[5px_5px_0_#242526] transition-all hover:scale-110 active:scale-95 flex items-center justify-center [clip-path:polygon(6%_0,100%_4%,94%_100%,0_96%)]">&lsaquo;</button>
-            <button id="gallery-next" type="button" aria-label="Scroll gallery right" class="absolute right-2 sm:right-3 md:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-ochre text-slate hover:bg-terracotta hover:text-white font-display font-extrabold text-2xl sm:text-3xl border-2 border-slate shadow-[4px_4px_0_#242526] sm:shadow-[5px_5px_0_#242526] transition-all hover:scale-110 active:scale-95 flex items-center justify-center [clip-path:polygon(0_4%,94%_0,100%_96%,6%_100%)]">&rsaquo;</button>
+            <!-- Left / Right floating carousel navigation buttons (desktop/tablet only so they don't cover photos on phones) -->
+            <button id="gallery-prev" type="button" aria-label="Scroll gallery left" class="hidden sm:flex absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 bg-ochre text-slate hover:bg-terracotta hover:text-white font-display font-extrabold text-3xl border-2 border-slate shadow-[5px_5px_0_#242526] transition-all hover:scale-110 active:scale-95 items-center justify-center [clip-path:polygon(6%_0,100%_4%,94%_100%,0_96%)]">&lsaquo;</button>
+            <button id="gallery-next" type="button" aria-label="Scroll gallery right" class="hidden sm:flex absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 bg-ochre text-slate hover:bg-terracotta hover:text-white font-display font-extrabold text-3xl border-2 border-slate shadow-[5px_5px_0_#242526] transition-all hover:scale-110 active:scale-95 items-center justify-center [clip-path:polygon(0_4%,94%_0,100%_96%,6%_100%)]">&rsaquo;</button>
 
-            <div id="gallery-container" class="relative z-10 w-full flex items-center gap-6 sm:gap-8 overflow-x-auto snap-x snap-mandatory px-[10vw] sm:px-[7vw] py-10 sm:py-12 my-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div id="gallery-container" class="relative z-10 w-full flex items-center gap-5 sm:gap-8 overflow-x-auto snap-x snap-mandatory px-[9vw] sm:px-[7vw] py-6 sm:py-12 my-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 <p id="gallery-status" class="text-white font-display text-xl">Loading gallery&hellip;</p>
             </div>
 
             <!-- Lifted bottom navigation bar -->
-            <div class="relative z-20 mt-2 mb-2 sm:mb-3 flex items-center justify-center px-2">
-                <div class="inline-flex items-center gap-2 sm:gap-5 bg-slate/85 backdrop-blur-sm px-3 sm:px-4 py-2 border-2 border-white/25 shadow-[4px_4px_0_rgba(0,0,0,0.4)]">
-                    <button type="button" data-gallery-dir="-1" class="bg-ochre text-slate hover:bg-terracotta hover:text-white font-display font-bold text-[11px] sm:text-xs uppercase tracking-widest px-3 sm:px-3.5 py-1.5 border border-slate transition-colors">&larr; Prev</button>
-                    <span class="text-canvas font-display text-[11px] sm:text-sm tracking-widest uppercase">Swipe or scroll</span>
-                    <button type="button" data-gallery-dir="1" class="bg-ochre text-slate hover:bg-terracotta hover:text-white font-display font-bold text-[11px] sm:text-xs uppercase tracking-widest px-3 sm:px-3.5 py-1.5 border border-slate transition-colors">Next &rarr;</button>
+            <div class="relative z-20 mt-1 sm:mt-2 mb-1 sm:mb-3 flex items-center justify-center px-3">
+                <div class="inline-flex items-center gap-3 sm:gap-5 bg-slate/90 backdrop-blur-sm px-3.5 sm:px-4 py-2 border-2 border-white/25 shadow-[4px_4px_0_rgba(0,0,0,0.4)]">
+                    <button type="button" data-gallery-dir="-1" class="bg-ochre text-slate active:bg-terracotta active:text-white sm:hover:bg-terracotta sm:hover:text-white font-display font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 border border-slate transition-colors">&larr; Prev</button>
+                    <span class="text-canvas font-display text-[11px] sm:text-sm tracking-widest uppercase">Swipe or tap</span>
+                    <button type="button" data-gallery-dir="1" class="bg-ochre text-slate active:bg-terracotta active:text-white sm:hover:bg-terracotta sm:hover:text-white font-display font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 border border-slate transition-colors">Next &rarr;</button>
                 </div>
             </div>
         </section>
 
         <!-- Lightbox Gallery (Curated high-resolution archive) -->
-        <section id="lightbox-gallery" class="relative px-4 sm:px-6 md:px-16 lg:px-24 py-14 sm:py-20 overflow-hidden">
+        <section id="lightbox-gallery" class="relative px-4 sm:px-6 md:px-16 lg:px-24 py-12 sm:py-20 overflow-hidden">
             <div class="pointer-events-none absolute -right-20 top-16 w-96 h-96 bg-ochre/20 -rotate-6 [clip-path:polygon(12%_0,100%_8%,88%_100%,0_92%)]"></div>
             <div class="pointer-events-none absolute -left-24 bottom-20 w-80 h-80 bg-terracotta/15 rotate-12 [clip-path:polygon(0_10%,95%_0,100%_90%,8%_100%)]"></div>
 
-            <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-5 sm:gap-6 border-b-4 border-slate pb-6 sm:pb-8">
+            <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 border-b-4 border-slate pb-5 sm:pb-8">
                 <div>
-                    <h2 class="bg-terracotta text-white font-display font-bold text-2xl sm:text-3xl md:text-4xl leading-none px-6 sm:px-9 py-3.5 sm:py-4 inline-flex items-center justify-center shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">Lightbox Gallery</h2>
-                    <p class="mt-3 max-w-2xl leading-relaxed text-xs sm:text-sm opacity-75">
-                        Explore the curated high-resolution archive from <code class="bg-white px-2 py-0.5 border border-slate font-display text-xs">17 Oct 2026</code> &mdash; every room perspective, close-up brushstroke study, exhibition booklet spread, and our stop at the 2D Parisian sketch café. Tap any frame to open the full-screen Lightbox viewer.
+                    <h2 class="bg-terracotta text-white font-display font-bold text-xl sm:text-3xl md:text-4xl leading-none px-5 sm:px-9 py-3 sm:py-4 inline-flex items-center justify-center shadow-[4px_4px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">Lightbox Gallery</h2>
+                    <p class="mt-2.5 sm:mt-3 max-w-2xl leading-relaxed text-xs sm:text-sm opacity-75">
+                        Explore the curated high-resolution archive from <code class="bg-white px-1.5 py-0.5 border border-slate font-display text-[11px] sm:text-xs">17 Oct 2026</code> &mdash; every room perspective, close-up study, booklet spread, and the 2D Parisian sketch café.
                     </p>
                 </div>
-                <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 self-start lg:self-end">
-                    <span id="related-count-badge" class="bg-slate text-canvas font-display font-bold text-xs uppercase tracking-widest px-3.5 sm:px-4 py-2 border-2 border-slate shadow-[4px_4px_0_#d4a048]">Loading&hellip;</span>
-                    <button type="button" data-refresh-gallery class="bg-white text-slate font-display font-bold text-xs uppercase tracking-widest px-3.5 sm:px-4 py-2 border-2 border-slate hover:bg-ochre transition-colors shadow-[4px_4px_0_#242526]">&#8635; Refresh</button>
-                    <button id="open-first-related" type="button" class="bg-terracotta text-white font-display font-bold text-xs sm:text-sm px-4 sm:px-5 py-2 border-2 border-slate hover:bg-blue-dark transition-colors shadow-[4px_4px_0_#242526]">Launch Slideshow &#9654;</button>
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3 self-start lg:self-end">
+                    <span id="related-count-badge" class="bg-slate text-canvas font-display font-bold text-[11px] sm:text-xs uppercase tracking-widest px-3 sm:px-4 py-2 border-2 border-slate shadow-[3px_3px_0_#d4a048] sm:shadow-[4px_4px_0_#d4a048]">Loading&hellip;</span>
+                    <button type="button" data-refresh-gallery class="bg-white text-slate font-display font-bold text-[11px] sm:text-xs uppercase tracking-widest px-3 sm:px-4 py-2 border-2 border-slate hover:bg-ochre transition-colors shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526]">&#8635; Refresh</button>
+                    <button id="open-first-related" type="button" class="bg-terracotta text-white font-display font-bold text-[11px] sm:text-sm px-3.5 sm:px-5 py-2 border-2 border-slate hover:bg-blue-dark transition-colors shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526]">Slideshow &#9654;</button>
                 </div>
             </div>
 
-            <!-- Chapter filter tabs -->
-            <div id="related-filters" class="relative z-10 flex flex-wrap gap-2 sm:gap-3 mt-5 sm:mt-6" role="tablist" aria-label="Filter related images by chapter"></div>
+            <!-- Chapter filter tabs: single-row horizontal swipe strip on mobile, wrapped pills on tablet/desktop -->
+            <div id="related-filters" class="relative z-10 flex overflow-x-auto sm:flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6 pb-2 sm:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label="Filter related images by chapter"></div>
 
             <!-- Contact-sheet thumbnail grid -->
-            <div id="related-grid" class="relative z-10 mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-7"></div>
+            <div id="related-grid" class="relative z-10 mt-6 sm:mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-6 md:gap-7"></div>
 
             <!-- Expand / collapse button -->
-            <div class="relative z-10 mt-10 sm:mt-12 flex justify-center">
-                <button id="related-toggle" type="button" class="hidden bg-white text-slate font-display font-extrabold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 border-2 border-slate hover:bg-ochre transition-colors shadow-[6px_6px_0_#242526] [clip-path:polygon(2%_0,100%_4%,98%_100%,0_96%)]"></button>
+            <div class="relative z-10 mt-8 sm:mt-12 flex justify-center">
+                <button id="related-toggle" type="button" class="hidden w-full sm:w-auto bg-white text-slate font-display font-extrabold text-xs sm:text-base px-6 sm:px-8 py-3.5 border-2 border-slate hover:bg-ochre transition-colors shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(2%_0,100%_4%,98%_100%,0_96%)]"></button>
             </div>
         </section>
 
         <!-- The 15 rooms -->
-        <section id="rooms" class="px-4 sm:px-6 md:px-16 lg:px-24 py-14 sm:py-20">
-            <h2 class="bg-terracotta text-white font-display font-bold text-2xl sm:text-3xl md:text-4xl leading-none px-6 sm:px-9 py-3.5 sm:py-4 inline-flex items-center justify-center shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">The 15 Rooms</h2>
-            <p class="mt-3 max-w-2xl leading-relaxed text-xs sm:text-sm opacity-75">Every room is its own colour world. <strong>Tap or click any room card below</strong> to immediately open the full-screen Lightbox with our curated photos from that room.</p>
-            <div id="rooms-grid" class="mt-8 sm:mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"></div>
-            <p class="mt-10 sm:mt-12 max-w-3xl font-display font-semibold text-base sm:text-xl leading-snug bg-white/80 p-5 sm:p-6 border-2 border-slate border-l-8 border-l-ochre shadow-[6px_6px_0_#242526]">
+        <section id="rooms" class="px-4 sm:px-6 md:px-16 lg:px-24 py-12 sm:py-20">
+            <h2 class="bg-terracotta text-white font-display font-bold text-xl sm:text-3xl md:text-4xl leading-none px-5 sm:px-9 py-3 sm:py-4 inline-flex items-center justify-center shadow-[4px_4px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">The 15 Rooms</h2>
+            <p class="mt-2.5 sm:mt-3 max-w-2xl leading-relaxed text-xs sm:text-sm opacity-75">Every room is its own colour world. <strong>Tap any room card below</strong> to open the full-screen Lightbox with our curated photos from that room.</p>
+            <div id="rooms-grid" class="mt-6 sm:mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8"></div>
+            <p class="mt-8 sm:mt-12 max-w-3xl font-display font-semibold text-sm sm:text-xl leading-snug bg-white/80 p-4 sm:p-6 border-2 border-slate border-l-8 border-l-ochre shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526]">
                 By tying Picasso&rsquo;s radical changes of period to shifts in colour, texture and wall treatment, the show closes the distance between viewer and master &mdash; modern art you can feel.
             </p>
         </section>
     </main>
 
-    <footer class="relative bg-slate text-canvas px-4 sm:px-6 md:px-16 lg:px-24 pt-10 sm:pt-12 pb-8 font-display text-xs sm:text-sm tracking-wide">
+    <footer class="relative bg-slate text-canvas px-4 sm:px-6 md:px-16 lg:px-24 pt-9 sm:pt-12 pb-8 font-display text-xs sm:text-sm tracking-wide">
         <div class="absolute top-0 inset-x-0 h-3 flex" aria-hidden="true">
             <i class="flex-1 bg-terracotta"></i><i class="flex-1 bg-white"></i><i class="flex-1 bg-blue-dark"></i><i class="flex-1 bg-ochre"></i><i class="flex-1 bg-olive"></i><i class="flex-1 bg-[#d63b8a]"></i><i class="flex-1 bg-[#1d2f5c]"></i><i class="flex-1 bg-[#f2c230]"></i>
         </div>
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
             <p>Picasso: Designed by Paul Smith &middot; Auckland Art Gallery Toi o Tāmaki &middot; 10 Oct 2026 &ndash; 1 Feb 2027</p>
             <p class="font-hand text-2xl text-ochre">Photos &amp; Memories by Brian &amp; Monya</p>
         </div>
@@ -224,12 +224,18 @@
 
     <!-- Lightbox -->
     <div id="lightbox" class="fixed inset-0 z-[100] hidden items-start lg:items-center justify-center overflow-y-auto lg:overflow-hidden bg-slate/95 backdrop-blur-sm p-3 sm:p-4 md:p-8" role="dialog" aria-modal="true" aria-label="Artwork viewer">
-        <button id="lb-close" class="fixed top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-8 z-30 w-10 h-10 sm:w-12 sm:h-12 bg-white text-slate border-2 border-slate shadow-[4px_4px_0_#c45a42] font-display font-bold text-2xl sm:text-3xl leading-none hover:bg-ochre transition-colors flex items-center justify-center" aria-label="Close">&times;</button>
-        <button id="lb-prev" class="fixed left-2 md:left-6 top-[32%] lg:top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 bg-white/95 text-slate border-2 border-slate shadow-[4px_4px_0_#242526] font-display font-bold text-3xl sm:text-4xl leading-none hover:bg-ochre transition-colors flex items-center justify-center" aria-label="Previous">&lsaquo;</button>
-        <button id="lb-next" class="fixed right-2 md:right-6 top-[32%] lg:top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 bg-white/95 text-slate border-2 border-slate shadow-[4px_4px_0_#242526] font-display font-bold text-3xl sm:text-4xl leading-none hover:bg-ochre transition-colors flex items-center justify-center" aria-label="Next">&rsaquo;</button>
-        <div class="w-full max-w-6xl my-auto pt-10 pb-6 lg:py-0 grid lg:grid-cols-[2fr_1fr] gap-4 sm:gap-6 items-center">
+        <button id="lb-close" class="fixed top-2.5 right-2.5 sm:top-4 sm:right-4 md:top-6 md:right-8 z-40 w-10 h-10 sm:w-12 sm:h-12 bg-white text-slate border-2 border-slate shadow-[3px_3px_0_#c45a42] sm:shadow-[4px_4px_0_#c45a42] font-display font-bold text-2xl sm:text-3xl leading-none hover:bg-ochre transition-colors flex items-center justify-center" aria-label="Close">&times;</button>
+        <button id="lb-prev" class="hidden lg:flex fixed left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white/95 text-slate border-2 border-slate shadow-[4px_4px_0_#242526] font-display font-bold text-4xl leading-none hover:bg-ochre transition-colors items-center justify-center" aria-label="Previous">&lsaquo;</button>
+        <button id="lb-next" class="hidden lg:flex fixed right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white/95 text-slate border-2 border-slate shadow-[4px_4px_0_#242526] font-display font-bold text-4xl leading-none hover:bg-ochre transition-colors items-center justify-center" aria-label="Next">&rsaquo;</button>
+        <div class="w-full max-w-6xl my-auto pt-10 pb-6 lg:py-0 grid lg:grid-cols-[2fr_1fr] gap-3 sm:gap-6 items-center">
             <div id="lb-media" class="flex items-center justify-center min-h-0 max-h-[54vh] sm:max-h-[65vh] lg:max-h-[85vh]"></div>
-            <div id="lb-info" class="bg-canvas text-slate p-5 sm:p-6 border-2 border-slate border-l-8 border-l-terracotta shadow-[8px_8px_0_rgba(0,0,0,0.45)] sm:shadow-[12px_12px_0_rgba(0,0,0,0.45)] [clip-path:polygon(0_0,100%_2%,98%_100%,2%_98%)] lg:max-h-[85vh] lg:overflow-y-auto"></div>
+            <!-- Dedicated mobile Prev / Counter / Next bar (shown on mobile/tablet so arrows never cover the artwork) -->
+            <div class="flex lg:hidden items-center justify-between gap-2 bg-slate text-canvas px-3 py-2 border-2 border-white/25 shadow-[4px_4px_0_rgba(0,0,0,0.4)]">
+                <button type="button" data-lb-dir="-1" class="bg-ochre text-slate active:bg-terracotta active:text-white font-display font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 border border-slate">&larr; Prev</button>
+                <span id="lb-mobile-counter" class="font-display font-bold text-xs tracking-widest uppercase text-ochre">1 / 1</span>
+                <button type="button" data-lb-dir="1" class="bg-ochre text-slate active:bg-terracotta active:text-white font-display font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 border border-slate">Next &rarr;</button>
+            </div>
+            <div id="lb-info" class="bg-canvas text-slate p-4 sm:p-6 border-2 border-slate border-l-8 border-l-terracotta shadow-[6px_6px_0_rgba(0,0,0,0.45)] sm:shadow-[12px_12px_0_rgba(0,0,0,0.45)] lg:[clip-path:polygon(0_0,100%_2%,98%_100%,2%_98%)] lg:max-h-[85vh] lg:overflow-y-auto"></div>
         </div>
     </div>
 
@@ -461,9 +467,9 @@
             const collage = document.getElementById('hero-collage');
 
             const bgColors = ['bg-terracotta', 'bg-ochre', 'bg-olive', 'bg-slate', 'bg-blue-light'];
-            const rotations = ['-rotate-3', 'rotate-3', '-rotate-2', 'rotate-6', '-rotate-6'];
-            const gridRotations = ['-rotate-1', 'rotate-1', '-rotate-2', 'rotate-2', 'rotate-0'];
-            const margins = ['translate-y-2', '-translate-y-2', 'translate-y-3', '-translate-y-1', 'translate-y-2'];
+            const rotations = ['-rotate-1 sm:-rotate-3', 'rotate-1 sm:rotate-3', '-rotate-1 sm:-rotate-2', 'rotate-2 sm:rotate-6', '-rotate-2 sm:-rotate-6'];
+            const gridRotations = ['sm:-rotate-1', 'sm:rotate-1', 'sm:-rotate-2', 'sm:rotate-2', 'rotate-0'];
+            const margins = ['sm:translate-y-2', 'sm:-translate-y-2', 'sm:translate-y-3', 'sm:-translate-y-1', 'sm:translate-y-2'];
             const cardClips = [
                 '[clip-path:polygon(2%_0,100%_3%,98%_100%,0_97%)]',
                 '[clip-path:polygon(0_2%,98%_0,100%_98%,2%_100%)]',
@@ -594,25 +600,25 @@
                 item.tabIndex = 0;
                 item.setAttribute('role', 'button');
                 item.setAttribute('aria-label', 'Open ' + titleOf(file.name));
-                item.className = `group relative shrink-0 snap-center w-[78vw] max-w-[320px] md:w-[400px] md:max-w-none cursor-pointer outline-none transition-all duration-500 hover:scale-110 hover:-translate-y-3 hover:!rotate-0 hover:z-30 focus-visible:scale-110 ${rotations[i % 5]} ${margins[i % 5]}`;
+                item.className = `group relative shrink-0 snap-center w-[80vw] max-w-[300px] sm:w-80 md:w-[400px] md:max-w-none cursor-pointer outline-none transition-all duration-500 active:scale-[0.98] md:hover:scale-110 md:hover:-translate-y-3 md:hover:!rotate-0 md:hover:z-30 focus-visible:scale-105 ${rotations[i % 5]} ${margins[i % 5]}`;
 
                 const stripeLayer = i % 5 === 1
-                    ? `<div class="absolute inset-0 -z-10 scale-110 [clip-path:polygon(0_5%,100%_0,95%_100%,5%_95%)]" style="background:${stripes};translate:-10px 10px"></div>` : '';
+                    ? `<div class="absolute inset-0 -z-10 scale-105 sm:scale-110 [clip-path:polygon(0_5%,100%_0,95%_100%,5%_95%)]" style="background:${stripes};translate:-8px 8px"></div>` : '';
                 const badge = room
-                    ? `<span class="absolute top-3 left-3 z-10 px-3 py-1 text-xs font-display font-bold uppercase tracking-wider text-white bg-slate border-2 border-white">Room ${room.n}</span>` : '';
+                    ? `<span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 z-10 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[11px] sm:text-xs font-display font-bold uppercase tracking-wider text-white bg-slate border-2 border-white">Room ${room.n}</span>` : '';
                 const snippetOverlay = snippet
-                    ? `<div class="pointer-events-none absolute inset-x-2 bottom-2 z-10 bg-slate/90 text-canvas p-4 pt-6 text-xs leading-relaxed opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 transition-all duration-300 border-t-2 border-ochre"><p>${esc(snippet)}</p></div>` : '';
+                    ? `<div class="pointer-events-none absolute inset-x-2 bottom-2 z-10 bg-slate/90 text-canvas p-4 pt-6 text-xs leading-relaxed opacity-0 translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 group-focus-visible:opacity-100 transition-all duration-300 border-t-2 border-ochre"><p>${esc(snippet)}</p></div>` : '';
                 item.innerHTML = `
-                    <div class="absolute -inset-4 -z-10 ${bgColors[i % 5]} ${cardClips[i % 4]}"></div>
+                    <div class="absolute -inset-2 sm:-inset-4 -z-10 ${bgColors[i % 5]} ${cardClips[i % 4]}"></div>
                     ${stripeLayer}
-                    <div data-media class="relative w-full h-[360px] sm:h-[420px] md:h-[500px] bg-white border-8 border-white shadow-[10px_10px_0_rgba(0,0,0,0.3)] flex items-center justify-center text-slate font-display overflow-hidden">Loading&hellip;</div>
+                    <div data-media class="relative w-full aspect-[4/5] sm:aspect-auto sm:h-[420px] md:h-[500px] bg-white border-[6px] sm:border-8 border-white shadow-[8px_8px_0_rgba(0,0,0,0.3)] sm:shadow-[10px_10px_0_rgba(0,0,0,0.3)] flex items-center justify-center text-slate font-display overflow-hidden">Loading&hellip;</div>
                     ${badge}
                     ${snippetOverlay}
-                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 -rotate-2 group-hover:rotate-0 group-hover:bg-ochre z-20 max-w-[92%] truncate bg-white text-slate font-display font-bold text-xs sm:text-base px-3.5 sm:px-5 py-1.5 border-2 border-slate shadow-[4px_4px_0_#242526] transition-all">${esc(titleOf(file.name))}</div>`;
+                    <div class="absolute -bottom-3.5 sm:-bottom-4 left-1/2 -translate-x-1/2 -rotate-1 sm:-rotate-2 md:group-hover:rotate-0 md:group-hover:bg-ochre z-20 max-w-[92%] truncate bg-white text-slate font-display font-bold text-xs sm:text-base px-3 sm:px-5 py-1 sm:py-1.5 border-2 border-slate shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526] transition-all">${esc(titleOf(file.name))}</div>`;
 
                 const slot = item.querySelector('[data-media]');
-                const mediaClass = 'w-full h-full object-cover [clip-path:polygon(2%_2%,98%_2%,98%_98%,2%_98%)] transition-[clip-path] duration-500 group-hover:[clip-path:polygon(0_0,100%_0,100%_100%,0_100%)]';
-                const playBadge = `<span class="pointer-events-none absolute inset-0 flex items-center justify-center"><span class="w-20 h-20 rounded-full bg-terracotta/90 border-4 border-white text-white text-3xl flex items-center justify-center pl-1 shadow-xl group-hover:scale-110 transition-transform">&#9654;</span></span>`;
+                const mediaClass = 'w-full h-full object-cover [clip-path:polygon(2%_2%,98%_2%,98%_98%,2%_98%)] transition-[clip-path] duration-500 md:group-hover:[clip-path:polygon(0_0,100%_0,100%_100%,0_100%)]';
+                const playBadge = `<span class="pointer-events-none absolute inset-0 flex items-center justify-center"><span class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-terracotta/90 border-4 border-white text-white text-2xl sm:text-3xl flex items-center justify-center pl-1 shadow-xl md:group-hover:scale-110 transition-transform">&#9654;</span></span>`;
 
                 const showPlaceholder = () => {
                     slot.textContent = `${file.name} can't be displayed in this browser.`;
@@ -621,7 +627,7 @@
                 const showImage = () => {
                     const img = document.createElement('img');
                     img.alt = titleOf(file.name); img.className = mediaClass;
-                    loadImage(img, file, showPlaceholder);
+                    loadImage(img, file, showPlaceholder, window.innerWidth < 768);
                     img.addEventListener('load', () => slot.replaceChildren(img, ...(isVideo(file.name) ? [slotPlay()] : [])), { once: true });
                 };
                 const slotPlay = () => { const t = document.createElement('div'); t.innerHTML = playBadge; return t.firstElementChild; };
@@ -653,29 +659,29 @@
                 card.tabIndex = 0;
                 card.setAttribute('role', 'button');
                 card.setAttribute('aria-label', 'Open in Lightbox: ' + titleOf(file.name));
-                card.className = `group relative cursor-pointer outline-none transition-all duration-300 hover:scale-110 hover:-translate-y-2 hover:!rotate-0 hover:z-30 focus-visible:scale-110 ${gridRotations[i % 5]}`;
+                card.className = `group relative cursor-pointer outline-none transition-all duration-300 active:scale-[0.98] md:hover:scale-110 md:hover:-translate-y-2 md:hover:!rotate-0 md:hover:z-30 focus-visible:scale-105 ${gridRotations[i % 5]}`;
 
                 const tagText = room ? `Room ${room.n}` : (chap ? chap.label.split(' ')[0] : '17 Oct');
                 const playOverlay = isVideo(file.name)
-                    ? `<span class="pointer-events-none absolute inset-0 flex items-center justify-center"><span class="w-12 h-12 rounded-full bg-terracotta/95 border-2 border-white text-white text-lg flex items-center justify-center pl-0.5 shadow-lg group-hover:scale-110 transition-transform">&#9654;</span></span>`
-                    : `<span class="pointer-events-none absolute inset-0 bg-slate/0 group-hover:bg-slate/35 transition-colors flex items-center justify-center"><span class="opacity-0 group-hover:opacity-100 transition-opacity bg-ochre text-slate font-display font-extrabold text-xs uppercase tracking-wider px-3 py-1.5 border-2 border-slate shadow-[3px_3px_0_#242526]">View &#10530;</span></span>`;
+                    ? `<span class="pointer-events-none absolute inset-0 flex items-center justify-center"><span class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-terracotta/95 border-2 border-white text-white text-base sm:text-lg flex items-center justify-center pl-0.5 shadow-lg md:group-hover:scale-110 transition-transform">&#9654;</span></span>`
+                    : `<span class="pointer-events-none absolute inset-0 bg-slate/0 md:group-hover:bg-slate/35 transition-colors flex items-center justify-center"><span class="opacity-0 md:group-hover:opacity-100 transition-opacity bg-ochre text-slate font-display font-extrabold text-xs uppercase tracking-wider px-3 py-1.5 border-2 border-slate shadow-[3px_3px_0_#242526]">View &#10530;</span></span>`;
 
                 card.innerHTML = `
-                    <div class="absolute -inset-2 -z-10 ${bgColors[i % 5]} ${cardClips[i % 4]} opacity-85 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative aspect-[4/5] w-full bg-white border-4 border-white shadow-[6px_6px_0_#242526] overflow-hidden flex items-center justify-center">
+                    <div class="absolute -inset-1 sm:-inset-2 -z-10 ${bgColors[i % 5]} ${cardClips[i % 4]} opacity-85 md:group-hover:opacity-100 transition-opacity"></div>
+                    <div class="relative aspect-[4/5] w-full bg-white border-2 sm:border-4 border-white shadow-[4px_4px_0_#242526] sm:shadow-[6px_6px_0_#242526] overflow-hidden flex items-center justify-center">
                         <div data-slot class="w-full h-full flex items-center justify-center bg-canvas text-xs font-display text-slate/60">Loading&hellip;</div>
-                        <span class="absolute top-2 left-2 z-10 px-2 py-0.5 text-[10px] font-display font-bold uppercase tracking-wider text-white bg-slate/90 border border-white">${esc(tagText)}</span>
+                        <span class="absolute top-1.5 left-1.5 sm:top-2 sm:left-2 z-10 px-1.5 sm:px-2 py-0.5 text-[9px] sm:text-[10px] font-display font-bold uppercase tracking-wider text-white bg-slate/90 border border-white">${esc(tagText)}</span>
                         ${playOverlay}
                     </div>
-                    <div class="mt-2 bg-white border-2 border-slate px-2.5 py-1.5 shadow-[3px_3px_0_#242526] group-hover:bg-ochre transition-colors">
-                        <p class="font-display font-bold text-xs truncate text-slate">${esc(titleOf(file.name))}</p>
+                    <div class="mt-1.5 sm:mt-2 bg-white border-2 border-slate px-2 sm:px-2.5 py-1 sm:py-1.5 shadow-[2px_2px_0_#242526] sm:shadow-[3px_3px_0_#242526] md:group-hover:bg-ochre transition-colors">
+                        <p class="font-display font-bold text-[11px] sm:text-xs truncate text-slate">${esc(titleOf(file.name))}</p>
                     </div>`;
 
                 const slot = card.querySelector('[data-slot]');
                 const showFallbackImg = () => {
                     const img = document.createElement('img');
                     img.alt = titleOf(file.name);
-                    img.className = 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-105';
+                    img.className = 'w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-105';
                     slot.replaceChildren(img);
                     loadImage(img, file, () => { slot.textContent = file.name; }, true);
                 };
@@ -709,7 +715,7 @@
                     const active = ch.id === activeChapter;
                     const count = counts[ch.id] || 0;
                     const clip = idx % 2 === 0 ? '[clip-path:polygon(3%_0,100%_5%,97%_100%,0_95%)]' : '[clip-path:polygon(0_5%,97%_0,100%_95%,3%_100%)]';
-                    return `<button type="button" data-chapter="${ch.id}" role="tab" aria-selected="${active}" class="${clip} font-display font-bold text-xs md:text-sm px-4 py-2 border-2 border-slate transition-all ${active ? 'bg-slate text-ochre shadow-[4px_4px_0_#c45a42] -translate-y-0.5' : 'bg-white text-slate hover:bg-ochre shadow-[3px_3px_0_#242526]'}">${esc(ch.label)} <span class="opacity-75">(${count})</span></button>`;
+                    return `<button type="button" data-chapter="${ch.id}" role="tab" aria-selected="${active}" class="shrink-0 whitespace-nowrap ${clip} font-display font-bold text-xs md:text-sm px-3.5 sm:px-4 py-2 border-2 border-slate transition-all ${active ? 'bg-slate text-ochre shadow-[3px_3px_0_#c45a42] sm:shadow-[4px_4px_0_#c45a42] -translate-y-0.5' : 'bg-white text-slate hover:bg-ochre shadow-[2px_2px_0_#242526] sm:shadow-[3px_3px_0_#242526]'}">${esc(ch.label)} <span class="opacity-75">(${count})</span></button>`;
                 }).join('');
                 bar.querySelectorAll('[data-chapter]').forEach(btn => {
                     btn.onclick = () => {
@@ -757,14 +763,14 @@
             // ---------- Hero ----------
             function buildHero() {
                 collage.innerHTML = `
-                    <div class="absolute -inset-3 bg-terracotta rotate-3 [clip-path:polygon(1.5%_0,100%_2%,98.5%_100%,0_98%)] shadow-[10px_10px_0_rgba(36,37,38,0.2)]"></div>
-                    <div class="absolute -inset-1.5 bg-ochre/90 -rotate-6 [clip-path:polygon(0_1%,99%_0,100%_99%,1%_100%)]"></div>
-                    <figure class="group absolute inset-0 -rotate-3 bg-white border-[8px] sm:border-[10px] md:border-[12px] border-white shadow-[14px_14px_0_rgba(36,37,38,0.4)] transition-all duration-500 ease-out hover:rotate-0 hover:scale-[1.03] hover:shadow-[20px_20px_0_rgba(36,37,38,0.5)]">
+                    <div class="absolute -inset-2 sm:-inset-3 bg-terracotta rotate-3 [clip-path:polygon(1.5%_0,100%_2%,98.5%_100%,0_98%)] shadow-[8px_8px_0_rgba(36,37,38,0.2)] sm:shadow-[10px_10px_0_rgba(36,37,38,0.2)]"></div>
+                    <div class="absolute -inset-1 sm:-inset-1.5 bg-ochre/90 -rotate-6 [clip-path:polygon(0_1%,99%_0,100%_99%,1%_100%)]"></div>
+                    <figure class="group absolute inset-0 -rotate-2 sm:-rotate-3 bg-white border-[6px] sm:border-[10px] md:border-[12px] border-white shadow-[10px_10px_0_rgba(36,37,38,0.4)] sm:shadow-[14px_14px_0_rgba(36,37,38,0.4)] transition-all duration-500 ease-out md:hover:rotate-0 md:hover:scale-[1.03] md:hover:shadow-[20px_20px_0_rgba(36,37,38,0.5)]">
                         <img id="hero-img" fetchpriority="high" decoding="async" alt="${esc(titleOf(HERO_NAME))}" class="w-full h-full object-cover object-center">
-                        <figcaption class="absolute -bottom-4 sm:-bottom-5 left-4 sm:left-6 bg-white border-2 border-slate px-4 sm:px-5 py-1 sm:py-1.5 font-display font-bold text-xs sm:text-sm md:text-base shadow-[4px_4px_0_#242526] rotate-2 group-hover:rotate-0 group-hover:bg-ochre transition-all duration-300">${esc(titleOf(HERO_NAME))}</figcaption>
+                        <figcaption class="absolute -bottom-3.5 sm:-bottom-5 left-3 sm:left-6 bg-white border-2 border-slate px-3 sm:px-5 py-1 sm:py-1.5 font-display font-bold text-xs sm:text-sm md:text-base shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526] rotate-2 md:group-hover:rotate-0 md:group-hover:bg-ochre transition-all duration-300">${esc(titleOf(HERO_NAME))}</figcaption>
                     </figure>
-                    <div id="hero-acc-1" class="hidden absolute -right-2 sm:-right-6 bottom-6 w-24 h-32 sm:w-32 sm:h-40 md:w-36 md:h-48 rotate-6 bg-white border-4 border-white shadow-[8px_8px_0_rgba(0,0,0,0.35)] animate-floaty [animation-delay:-3s] z-10"><img class="w-full h-full object-cover" alt=""></div>
-                    <div class="absolute -top-4 sm:-top-6 -right-1 sm:-right-4 z-20 rotate-3 bg-ochre border-2 border-slate px-4 sm:px-5 py-1.5 sm:py-2 font-hand text-xl sm:text-2xl shadow-[4px_4px_0_#242526]">Brian &amp; Monya</div>`;
+                    <div id="hero-acc-1" class="hidden absolute -right-2 sm:-right-6 bottom-5 sm:bottom-6 w-20 h-26 sm:w-32 sm:h-40 md:w-36 md:h-48 rotate-6 bg-white border-4 border-white shadow-[6px_6px_0_rgba(0,0,0,0.35)] sm:shadow-[8px_8px_0_rgba(0,0,0,0.35)] animate-floaty [animation-delay:-3s] z-10"><img class="w-full h-full object-cover" alt=""></div>
+                    <div class="absolute -top-3.5 sm:-top-6 -right-1 sm:-right-4 z-20 rotate-3 bg-ochre border-2 border-slate px-3 sm:px-5 py-1 sm:py-2 font-hand text-lg sm:text-2xl shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526]">Brian &amp; Monya</div>`;
                 loadImage(document.getElementById('hero-img'), { name: HERO_NAME, url: CURATED_URL + HERO_NAME });
                 // keep the original fallback path if neither source loads
                 document.getElementById('hero-img').addEventListener('error', function () { if (!this.src.endsWith('IMG_6326.jpg')) this.src = HERO_FALLBACK; });
@@ -808,25 +814,25 @@
                     const count = roomPhotos.length;
                     const countLabel = count === 1 ? '1 Photo' : `${count} Photos`;
                     return `
-                    <article id="room-${r.n}" data-room-card="${r.n}" role="button" tabindex="0" aria-label="Open Room ${r.n}: ${esc(r.title)} (${countLabel})" data-reveal class="group relative cursor-pointer outline-none bg-white border-2 border-slate shadow-[8px_8px_0_#242526] hover:-translate-y-2 hover:shadow-[12px_12px_0_#c45a42] focus-visible:-translate-y-2 focus-visible:shadow-[12px_12px_0_#c45a42] transition-all duration-500 opacity-0 translate-y-6 flex flex-col">
-                        <div class="h-28 relative border-b-2 border-slate" style="background:${r.c}">
-                            <span class="absolute -bottom-6 left-5 w-14 h-14 rounded-full bg-slate text-white border-4 border-white shadow-[3px_3px_0_#242526] font-display font-extrabold text-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-terracotta transition-all duration-300 z-10">${r.n}</span>
-                            <span class="absolute top-3 right-3 px-3 py-1 bg-slate/90 text-ochre group-hover:bg-terracotta group-hover:text-white border-2 border-white shadow-[3px_3px_0_#242526] font-display font-bold text-xs uppercase tracking-wider transition-colors">${countLabel} &#10530;</span>
-                            <div data-room-thumb="${r.n}" class="hidden absolute -bottom-6 right-5 w-14 h-14 rounded-full bg-white border-4 border-white shadow-[3px_3px_0_#242526] overflow-hidden z-10 group-hover:scale-110 transition-transform duration-300">
+                    <article id="room-${r.n}" data-room-card="${r.n}" role="button" tabindex="0" aria-label="Open Room ${r.n}: ${esc(r.title)} (${countLabel})" data-reveal class="group relative cursor-pointer outline-none bg-white border-2 border-slate shadow-[5px_5px_0_#242526] sm:shadow-[8px_8px_0_#242526] active:scale-[0.99] md:hover:-translate-y-2 md:hover:shadow-[12px_12px_0_#c45a42] focus-visible:-translate-y-2 focus-visible:shadow-[12px_12px_0_#c45a42] transition-all duration-500 opacity-0 translate-y-6 flex flex-col">
+                        <div class="h-20 sm:h-28 relative border-b-2 border-slate" style="background:${r.c}">
+                            <span class="absolute -bottom-5 sm:-bottom-6 left-4 sm:left-5 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-slate text-white border-4 border-white shadow-[3px_3px_0_#242526] font-display font-extrabold text-base sm:text-xl flex items-center justify-center md:group-hover:scale-110 md:group-hover:bg-terracotta transition-all duration-300 z-10">${r.n}</span>
+                            <span class="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 px-2.5 sm:px-3 py-0.5 sm:py-1 bg-slate/90 text-ochre md:group-hover:bg-terracotta md:group-hover:text-white border-2 border-white shadow-[2px_2px_0_#242526] sm:shadow-[3px_3px_0_#242526] font-display font-bold text-[11px] sm:text-xs uppercase tracking-wider transition-colors">${countLabel} &#10530;</span>
+                            <div data-room-thumb="${r.n}" class="hidden absolute -bottom-5 sm:-bottom-6 right-4 sm:right-5 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-white border-4 border-white shadow-[3px_3px_0_#242526] overflow-hidden z-10 md:group-hover:scale-110 transition-transform duration-300">
                                 <img class="w-full h-full object-cover" alt="">
                             </div>
                         </div>
-                        <div class="p-6 pt-9 flex-1 flex flex-col">
-                            <h3 class="font-display font-bold text-xl leading-tight group-hover:text-terracotta transition-colors">${esc(r.title)}</h3>
-                            <p class="text-sm mt-2 leading-relaxed text-slate/85">${esc(r.theme)}</p>
-                            <p class="text-xs font-display font-bold uppercase tracking-wider mt-4 text-terracotta">Walls</p>
-                            <p class="text-sm">${esc(r.wall)}</p>
-                            <p class="text-xs font-display font-bold uppercase tracking-wider mt-3 text-terracotta">Paul Smith touch</p>
-                            <p class="text-sm mb-4">${esc(r.act)}</p>
-                            <p class="text-xs italic mt-auto pt-3 border-t border-slate/15 opacity-75">${esc(r.art)}</p>
-                            <div class="mt-4 pt-3 border-t-2 border-slate flex items-center justify-between font-display font-bold text-xs uppercase tracking-wider text-slate group-hover:text-terracotta transition-colors">
-                                <span>View Room ${r.n} Gallery (${count})</span>
-                                <span class="bg-ochre text-slate group-hover:bg-terracotta group-hover:text-white px-2.5 py-1 border border-slate shadow-[2px_2px_0_#242526] transition-colors">Open &rarr;</span>
+                        <div class="p-4 pt-7 sm:p-6 sm:pt-9 flex-1 flex flex-col">
+                            <h3 class="font-display font-bold text-lg sm:text-xl leading-tight md:group-hover:text-terracotta transition-colors">${esc(r.title)}</h3>
+                            <p class="text-xs sm:text-sm mt-1.5 sm:mt-2 leading-relaxed text-slate/85">${esc(r.theme)}</p>
+                            <p class="text-[11px] sm:text-xs font-display font-bold uppercase tracking-wider mt-3 sm:mt-4 text-terracotta">Walls</p>
+                            <p class="text-xs sm:text-sm">${esc(r.wall)}</p>
+                            <p class="text-[11px] sm:text-xs font-display font-bold uppercase tracking-wider mt-2.5 sm:mt-3 text-terracotta">Paul Smith touch</p>
+                            <p class="text-xs sm:text-sm mb-3 sm:mb-4">${esc(r.act)}</p>
+                            <p class="text-[11px] sm:text-xs italic mt-auto pt-2.5 sm:pt-3 border-t border-slate/15 opacity-75">${esc(r.art)}</p>
+                            <div class="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t-2 border-slate flex items-center justify-between font-display font-bold text-xs uppercase tracking-wider text-slate md:group-hover:text-terracotta transition-colors">
+                                <span>View Room ${r.n} (${count})</span>
+                                <span class="bg-ochre text-slate md:group-hover:bg-terracotta md:group-hover:text-white px-2.5 py-1 border border-slate shadow-[2px_2px_0_#242526] transition-colors">Open &rarr;</span>
                             </div>
                         </div>
                     </article>`;
@@ -870,13 +876,14 @@
                     e.target.classList.remove('opacity-0', 'translate-y-6');
                     revealObs.unobserve(e.target);
                 }
-            }), { threshold: 0.12 });
+            }), { threshold: 0.04 });
             function observeReveal() { document.querySelectorAll('[data-reveal]').forEach(el => revealObs.observe(el)); }
 
             // ---------- Lightbox ----------
             const lb = document.getElementById('lightbox');
             const lbMedia = document.getElementById('lb-media');
             const lbInfo = document.getElementById('lb-info');
+            const lbMobileCounter = document.getElementById('lb-mobile-counter');
             let activeList = [];
             let activeRoomContext = null;
             let current = -1;
@@ -890,15 +897,16 @@
                 lbMedia.replaceChildren();
                 lb.classList.remove('hidden'); lb.classList.add('flex');
                 document.body.classList.add('overflow-hidden');
+                if (lbMobileCounter) lbMobileCounter.textContent = `${current + 1} / ${activeList.length}`;
 
                 if (isVideo(f.name)) {
                     const v = document.createElement('video');
                     Object.assign(v, { src: f.url, controls: true, autoplay: true, loop: true, playsInline: true });
-                    v.className = 'max-w-full max-h-[52vh] sm:max-h-[65vh] lg:max-h-[85vh] border-4 sm:border-8 border-white shadow-[12px_12px_0_rgba(0,0,0,0.4)] bg-black';
+                    v.className = 'max-w-full max-h-[50vh] sm:max-h-[65vh] lg:max-h-[85vh] border-4 sm:border-8 border-white shadow-[8px_8px_0_rgba(0,0,0,0.4)] sm:shadow-[12px_12px_0_rgba(0,0,0,0.4)] bg-black';
                     v.onerror = () => {
                         const fallbackImg = document.createElement('img');
                         fallbackImg.alt = titleOf(f.name);
-                        fallbackImg.className = 'max-w-full max-h-[52vh] sm:max-h-[65vh] lg:max-h-[85vh] object-contain border-4 sm:border-8 border-white shadow-[12px_12px_0_rgba(0,0,0,0.4)] bg-white';
+                        fallbackImg.className = 'max-w-full max-h-[50vh] sm:max-h-[65vh] lg:max-h-[85vh] object-contain border-4 sm:border-8 border-white shadow-[8px_8px_0_rgba(0,0,0,0.4)] sm:shadow-[12px_12px_0_rgba(0,0,0,0.4)] bg-white';
                         loadImage(fallbackImg, f);
                         lbMedia.replaceChildren(fallbackImg);
                     };
@@ -906,7 +914,7 @@
                 } else {
                     const img = document.createElement('img');
                     img.alt = titleOf(f.name);
-                    img.className = 'max-w-full max-h-[52vh] sm:max-h-[65vh] lg:max-h-[85vh] object-contain border-4 sm:border-8 border-white shadow-[12px_12px_0_rgba(0,0,0,0.4)] bg-white';
+                    img.className = 'max-w-full max-h-[50vh] sm:max-h-[65vh] lg:max-h-[85vh] object-contain border-4 sm:border-8 border-white shadow-[8px_8px_0_rgba(0,0,0,0.4)] sm:shadow-[12px_12px_0_rgba(0,0,0,0.4)] bg-white';
                     if (resolved.has(f.url)) img.src = resolved.get(f.url); else loadImage(img, f);
                     lbMedia.appendChild(img);
                 }
@@ -914,24 +922,24 @@
                 const r = activeRoomContext || roomOf(f.name);
                 const s = snippetOf(f.name);
                 const contextBanner = activeRoomContext
-                    ? `<div class="mb-2 inline-flex items-center gap-2 bg-slate text-ochre font-display font-bold text-xs uppercase tracking-wider px-3 py-1 border border-slate shadow-[2px_2px_0_#c45a42]">Room ${activeRoomContext.n} &middot; ${esc(activeRoomContext.title)}</div>`
+                    ? `<div class="mb-2 inline-flex items-center gap-2 bg-slate text-ochre font-display font-bold text-[11px] sm:text-xs uppercase tracking-wider px-2.5 sm:px-3 py-1 border border-slate shadow-[2px_2px_0_#c45a42]">Room ${activeRoomContext.n} &middot; ${esc(activeRoomContext.title)}</div>`
                     : '';
                 lbInfo.innerHTML = `
-                    <div class="flex h-1.5 -mx-5 sm:-mx-6 -mt-5 sm:-mt-6 mb-4 sm:mb-5 border-b border-slate/20 overflow-hidden"><span class="flex-1 bg-terracotta"></span><span class="flex-1 bg-ochre"></span><span class="flex-1 bg-cobalt"></span><span class="flex-1 bg-mint"></span><span class="flex-1 bg-magenta"></span><span class="flex-1 bg-coral"></span></div>
+                    <div class="flex h-1.5 -mx-4 sm:-mx-6 -mt-4 sm:-mt-6 mb-3.5 sm:mb-5 border-b border-slate/20 overflow-hidden"><span class="flex-1 bg-terracotta"></span><span class="flex-1 bg-ochre"></span><span class="flex-1 bg-cobalt"></span><span class="flex-1 bg-mint"></span><span class="flex-1 bg-magenta"></span><span class="flex-1 bg-coral"></span></div>
                     ${contextBanner}
                     <p class="font-hand text-xl sm:text-2xl text-terracotta">${current + 1} of ${activeList.length}</p>
-                    <h3 class="font-display font-extrabold text-2xl sm:text-3xl leading-tight">${esc(titleOf(f.name))}</h3>
-                    ${s ? `<p class="mt-3 text-sm leading-relaxed bg-white/80 p-3.5 border-l-4 border-ochre shadow-sm">${esc(s)}</p>` : ''}
+                    <h3 class="font-display font-extrabold text-xl sm:text-3xl leading-tight">${esc(titleOf(f.name))}</h3>
+                    ${s ? `<p class="mt-2.5 sm:mt-3 text-xs sm:text-sm leading-relaxed bg-white/80 p-3 sm:p-3.5 border-l-4 border-ochre shadow-sm">${esc(s)}</p>` : ''}
                     ${r ? `
-                        <div class="h-3 mt-4 border border-slate" style="background:${r.c}"></div>
-                        <p class="font-display font-bold mt-3">Room ${r.n} &middot; ${esc(r.title)}</p>
-                        <p class="text-sm mt-1 leading-relaxed">${esc(r.theme)}</p>
-                        <p class="text-xs font-display font-bold uppercase tracking-wider mt-4 text-terracotta">Walls</p>
-                        <p class="text-sm">${esc(r.wall)}</p>
-                        <p class="text-xs font-display font-bold uppercase tracking-wider mt-3 text-terracotta">Paul Smith touch</p>
-                        <p class="text-sm">${esc(r.act)}</p>
-                        <a href="#room-${r.n}" data-close class="inline-block mt-5 font-display font-bold underline decoration-2 underline-offset-4 hover:text-terracotta">See Room ${r.n} card &rarr;</a>`
-                    : `<p class="text-sm mt-3 opacity-70">${isVideo(f.name) ? 'Press play to watch.' : 'A moment from our day.'}</p>`}`;
+                        <div class="h-2.5 sm:h-3 mt-3.5 sm:mt-4 border border-slate" style="background:${r.c}"></div>
+                        <p class="font-display font-bold text-sm sm:text-base mt-2.5 sm:mt-3">Room ${r.n} &middot; ${esc(r.title)}</p>
+                        <p class="text-xs sm:text-sm mt-1 leading-relaxed">${esc(r.theme)}</p>
+                        <p class="text-[11px] sm:text-xs font-display font-bold uppercase tracking-wider mt-3 sm:mt-4 text-terracotta">Walls</p>
+                        <p class="text-xs sm:text-sm">${esc(r.wall)}</p>
+                        <p class="text-[11px] sm:text-xs font-display font-bold uppercase tracking-wider mt-2.5 sm:mt-3 text-terracotta">Paul Smith touch</p>
+                        <p class="text-xs sm:text-sm">${esc(r.act)}</p>
+                        <a href="#room-${r.n}" data-close class="inline-block mt-4 sm:mt-5 font-display font-bold text-xs sm:text-sm underline decoration-2 underline-offset-4 hover:text-terracotta">See Room ${r.n} card &rarr;</a>`
+                    : `<p class="text-xs sm:text-sm mt-3 opacity-70">${isVideo(f.name) ? 'Press play to watch.' : 'A moment from our day.'}</p>`}`;
             }
 
             function closeLightbox() {
@@ -949,6 +957,9 @@
             document.getElementById('lb-close').onclick = closeLightbox;
             document.getElementById('lb-prev').onclick = () => openLightbox(current - 1, activeList, activeRoomContext);
             document.getElementById('lb-next').onclick = () => openLightbox(current + 1, activeList, activeRoomContext);
+            document.querySelectorAll('[data-lb-dir]').forEach(btn => {
+                btn.onclick = () => openLightbox(current + Number(btn.dataset.lbDir), activeList, activeRoomContext);
+            });
             lb.addEventListener('click', e => { if (e.target === lb || e.target.closest('[data-close]')) closeLightbox(); });
             document.addEventListener('keydown', e => {
                 if (current < 0) return;
