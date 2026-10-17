@@ -59,7 +59,7 @@
     </nav>
 
     <!-- HERO -->
-    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 md:px-16 lg:px-24 pt-28 sm:pt-32 pb-20 sm:pb-28">
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 md:px-16 lg:px-24 pt-24 sm:pt-28 lg:pt-24 pb-16 sm:pb-20">
         <!-- Cubist shapes (parallax targets) -->
         <div class="absolute inset-0 pointer-events-none">
             <div data-parallax class="absolute bg-blue-dark w-[75vw] sm:w-[55vw] h-[55vh] sm:h-[75vh] -top-10 right-0 sm:right-[5vw] opacity-20 lg:opacity-100 [clip-path:polygon(20%_0%,100%_0,80%_100%,0%_100%)]"></div>
@@ -68,11 +68,11 @@
             <div data-parallax class="absolute bg-olive w-52 h-52 sm:w-72 sm:h-72 bottom-0 right-[20vw] sm:right-[30vw] [clip-path:polygon(10%_0,100%_15%,85%_100%,0_85%)] opacity-35 lg:opacity-90"></div>
         </div>
 
-        <div class="relative z-10 w-full grid lg:grid-cols-[0.9fr_1.25fr] gap-10 sm:gap-12 lg:gap-16 items-center">
+        <div class="relative z-10 w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-14 items-center">
             <div>
                 <p class="font-hand text-2xl sm:text-3xl text-terracotta mb-2 -rotate-1">Auckland Art Gallery Toi o Tāmaki &middot; our visit, 17 Oct 2026</p>
-                <h1 class="font-display font-extrabold text-5xl sm:text-7xl md:text-9xl tracking-tight leading-[0.9]">PICASSO:</h1>
-                <h2 class="font-display font-bold text-2xl sm:text-3xl md:text-5xl mt-2 sm:mt-3">Designed by Paul Smith</h2>
+                <h1 class="font-display font-extrabold text-5xl sm:text-7xl lg:text-8xl xl:text-9xl tracking-tight leading-[0.9]">PICASSO:</h1>
+                <h2 class="font-display font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mt-2 sm:mt-3">Designed by Paul Smith</h2>
                 <p class="mt-4 sm:mt-6 max-w-lg text-base sm:text-lg leading-relaxed">
                     Fifteen rooms, fifteen moods. Sir Paul Smith floods each of Picasso&rsquo;s periods with its own colour, pattern and texture &mdash; and we wandered through all of it.
                 </p>
@@ -82,9 +82,9 @@
                 </div>
 
                 <div class="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8">
-                    <a href="#gallery" class="bg-terracotta text-white font-display font-bold text-sm sm:text-lg px-6 py-3 sm:px-9 sm:py-4 hover:bg-slate hover:-translate-y-0.5 transition-all shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">Curated Favourites</a>
-                    <a href="#lightbox-gallery" class="bg-ochre text-slate font-display font-bold text-sm sm:text-lg px-6 py-3 sm:px-9 sm:py-4 border-2 border-slate hover:bg-white hover:-translate-y-0.5 transition-all shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(2%_4%,98%_0,100%_96%,0_100%)]">Lightbox Gallery</a>
-                    <a href="#rooms" class="bg-white text-slate font-display font-bold text-sm sm:text-lg px-6 py-3 sm:px-9 sm:py-4 border-2 border-slate hover:bg-ochre hover:-translate-y-0.5 transition-all shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526]">Explore the 15 rooms</a>
+                    <a href="#gallery" class="bg-terracotta text-white font-display font-bold text-sm sm:text-lg px-6 py-3 sm:px-8 sm:py-3.5 xl:px-9 xl:py-4 hover:bg-slate hover:-translate-y-0.5 transition-all shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">Curated Favourites</a>
+                    <a href="#lightbox-gallery" class="bg-ochre text-slate font-display font-bold text-sm sm:text-lg px-6 py-3 sm:px-8 sm:py-3.5 xl:px-9 xl:py-4 border-2 border-slate hover:bg-white hover:-translate-y-0.5 transition-all shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(2%_4%,98%_0,100%_96%,0_100%)]">Lightbox Gallery</a>
+                    <a href="#rooms" class="bg-white text-slate font-display font-bold text-sm sm:text-lg px-6 py-3 sm:px-8 sm:py-3.5 xl:px-9 xl:py-4 border-2 border-slate hover:bg-ochre hover:-translate-y-0.5 transition-all shadow-[5px_5px_0_#242526] sm:shadow-[6px_6px_0_#242526]">Explore the 15 rooms</a>
                 </div>
 
                 <dl class="mt-8 sm:mt-10 grid grid-cols-3 gap-3 sm:gap-4 max-w-md font-display">
@@ -94,8 +94,8 @@
                 </dl>
             </div>
 
-            <!-- Hero photo collage -->
-            <div id="hero-collage" class="relative h-[400px] sm:h-[540px] md:h-[680px] lg:h-[740px] w-full max-w-3xl mx-auto lg:ml-auto my-4 sm:my-0"></div>
+            <!-- Hero photo collage (exact 3:4 portrait ratio matching IMG_6326) -->
+            <div id="hero-collage" class="relative aspect-[3/4] w-full max-w-[300px] sm:max-w-[380px] md:max-w-[430px] lg:max-w-[450px] xl:max-w-[490px] mx-auto my-4 lg:my-0"></div>
         </div>
 
         <!-- Paul Smith-style stripe band -->
@@ -757,14 +757,14 @@
             // ---------- Hero ----------
             function buildHero() {
                 collage.innerHTML = `
-                    <div class="absolute inset-1 sm:-inset-4 bg-terracotta -rotate-[6deg] sm:-rotate-[11deg] [clip-path:polygon(1.5%_0,100%_2%,98.5%_100%,0_98%)] shadow-[10px_10px_0_rgba(36,37,38,0.2)]"></div>
-                    <div class="absolute inset-2 sm:-inset-2 bg-ochre/90 -rotate-[8deg] sm:-rotate-[13deg] [clip-path:polygon(0_1%,99%_0,100%_99%,1%_100%)]"></div>
-                    <figure class="group absolute inset-3 sm:inset-0 -rotate-[8deg] sm:-rotate-[15deg] sm:scale-[1.04] bg-white border-[8px] sm:border-[10px] md:border-[12px] border-white shadow-[12px_12px_0_rgba(36,37,38,0.4)] sm:shadow-[16px_16px_0_rgba(36,37,38,0.4)] transition-all duration-500 ease-out hover:rotate-0 hover:scale-[1.04] sm:hover:scale-[1.08] hover:shadow-[20px_20px_0_rgba(36,37,38,0.5)]">
+                    <div class="absolute -inset-3 bg-terracotta rotate-3 [clip-path:polygon(1.5%_0,100%_2%,98.5%_100%,0_98%)] shadow-[10px_10px_0_rgba(36,37,38,0.2)]"></div>
+                    <div class="absolute -inset-1.5 bg-ochre/90 -rotate-6 [clip-path:polygon(0_1%,99%_0,100%_99%,1%_100%)]"></div>
+                    <figure class="group absolute inset-0 -rotate-3 bg-white border-[8px] sm:border-[10px] md:border-[12px] border-white shadow-[14px_14px_0_rgba(36,37,38,0.4)] transition-all duration-500 ease-out hover:rotate-0 hover:scale-[1.03] hover:shadow-[20px_20px_0_rgba(36,37,38,0.5)]">
                         <img id="hero-img" fetchpriority="high" decoding="async" alt="${esc(titleOf(HERO_NAME))}" class="w-full h-full object-cover object-center">
-                        <figcaption class="absolute -bottom-4 sm:-bottom-5 left-3 sm:left-8 bg-white border-2 border-slate px-3 sm:px-5 py-1 sm:py-1.5 font-display font-bold text-xs sm:text-sm md:text-base shadow-[4px_4px_0_#242526] rotate-[4deg] sm:rotate-[6deg] group-hover:rotate-0 group-hover:bg-ochre transition-all duration-300">${esc(titleOf(HERO_NAME))}</figcaption>
+                        <figcaption class="absolute -bottom-4 sm:-bottom-5 left-4 sm:left-6 bg-white border-2 border-slate px-4 sm:px-5 py-1 sm:py-1.5 font-display font-bold text-xs sm:text-sm md:text-base shadow-[4px_4px_0_#242526] rotate-2 group-hover:rotate-0 group-hover:bg-ochre transition-all duration-300">${esc(titleOf(HERO_NAME))}</figcaption>
                     </figure>
-                    <div id="hero-acc-1" class="hidden absolute right-1 md:-right-8 bottom-3 sm:bottom-6 w-24 h-32 sm:w-32 sm:h-40 md:w-40 md:h-52 rotate-[6deg] bg-white border-4 border-white shadow-[8px_8px_0_rgba(0,0,0,0.35)] animate-floaty [animation-delay:-3s] z-10"><img class="w-full h-full object-cover" alt=""></div>
-                    <div class="absolute -top-3 sm:-top-6 right-2 md:-right-4 z-20 rotate-[4deg] bg-ochre border-2 border-slate px-3.5 sm:px-5 py-1.5 sm:py-2 font-hand text-xl sm:text-2xl shadow-[4px_4px_0_#242526]">Brian &amp; Monya</div>`;
+                    <div id="hero-acc-1" class="hidden absolute -right-2 sm:-right-6 bottom-6 w-24 h-32 sm:w-32 sm:h-40 md:w-36 md:h-48 rotate-6 bg-white border-4 border-white shadow-[8px_8px_0_rgba(0,0,0,0.35)] animate-floaty [animation-delay:-3s] z-10"><img class="w-full h-full object-cover" alt=""></div>
+                    <div class="absolute -top-4 sm:-top-6 -right-1 sm:-right-4 z-20 rotate-3 bg-ochre border-2 border-slate px-4 sm:px-5 py-1.5 sm:py-2 font-hand text-xl sm:text-2xl shadow-[4px_4px_0_#242526]">Brian &amp; Monya</div>`;
                 loadImage(document.getElementById('hero-img'), { name: HERO_NAME, url: CURATED_URL + HERO_NAME });
                 // keep the original fallback path if neither source loads
                 document.getElementById('hero-img').addEventListener('error', function () { if (!this.src.endsWith('IMG_6326.jpg')) this.src = HERO_FALLBACK; });
