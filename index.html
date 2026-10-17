@@ -559,7 +559,6 @@
                 const thumbSrc = THUMBS_URL + baseStem + '.jpg';
                 img.decoding = 'async';
                 if (useThumb) {
-                    img.loading = 'lazy';
                     img.onerror = () => {
                         img.onerror = onFail;
                         img.onload = () => resolved.set(file.url, fullSrc);
@@ -621,20 +620,20 @@
                 };
                 const showImage = () => {
                     const img = document.createElement('img');
-                    if (i > 2) img.loading = 'lazy';
                     img.alt = titleOf(file.name); img.className = mediaClass;
-                    loadImage(img, file, showPlaceholder, false);
+                    loadImage(img, file, showPlaceholder);
                     img.addEventListener('load', () => slot.replaceChildren(img, ...(isVideo(file.name) ? [slotPlay()] : [])), { once: true });
                 };
                 const slotPlay = () => { const t = document.createElement('div'); t.innerHTML = playBadge; return t.firstElementChild; };
 
-                if (isVideo(file.name)) {
+                if (extOf(file.name) === 'mp4') {
                     // Still frame + play button; the video plays when clicked (in the viewer)
                     const v = document.createElement('video');
                     Object.assign(v, { src: file.url + '#t=0.1', preload: 'metadata', muted: true, playsInline: true });
                     v.className = mediaClass;
                     v.onloadeddata = () => { slot.replaceChildren(v, slotPlay()); };
                     v.onerror = showImage; // codec not supported: try a still instead
+                    v.load();
                 } else {
                     showImage();
                 }
@@ -681,12 +680,13 @@
                     loadImage(img, file, () => { slot.textContent = file.name; }, true);
                 };
 
-                if (isVideo(file.name)) {
+                if (extOf(file.name) === 'mp4') {
                     const v = document.createElement('video');
                     Object.assign(v, { src: file.url + '#t=0.1', preload: 'metadata', muted: true, playsInline: true });
                     v.className = 'w-full h-full object-cover';
                     v.onloadeddata = () => { slot.replaceChildren(v); };
                     v.onerror = showFallbackImg;
+                    v.load();
                 } else {
                     showFallbackImg();
                 }
