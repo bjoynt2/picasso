@@ -53,9 +53,9 @@
     <!-- Top nav: sticky single-row bar on mobile, floating Cubist pills on desktop -->
     <nav class="sticky top-0 md:absolute inset-x-0 z-40 bg-canvas/95 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border-b-2 border-slate md:border-none flex items-center justify-between md:justify-end gap-1.5 sm:gap-3 px-3 sm:px-6 md:px-16 lg:px-24 py-2.5 sm:py-3 md:pt-6 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <a href="#about" class="shrink-0 whitespace-nowrap bg-slate text-white font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#c45a42] sm:shadow-[4px_4px_0_#c45a42] hover:bg-gray-700 md:hover:-translate-y-0.5 transition-all [clip-path:polygon(3%_0,100%_4%,97%_100%,0_96%)]">Our Review</a>
+        <a href="#gallery" class="shrink-0 whitespace-nowrap bg-ochre text-slate font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-white md:hover:-translate-y-0.5 transition-all [clip-path:polygon(3%_0,100%_4%,97%_100%,0_96%)]">Curated Favourites</a>
         <a href="#paul-smith" class="shrink-0 whitespace-nowrap bg-olive text-white font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-slate md:hover:-translate-y-0.5 transition-all [clip-path:polygon(3%_0,100%_4%,97%_100%,0_96%)]">Paul Smith Film</a>
         <a href="#cubism-tailored" class="shrink-0 whitespace-nowrap bg-[#d63b8a] text-white font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-slate md:hover:-translate-y-0.5 transition-all [clip-path:polygon(0_4%,97%_0,100%_96%,3%_100%)]">Cubism Tailored</a>
-        <a href="#gallery" class="shrink-0 whitespace-nowrap bg-ochre text-slate font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-white md:hover:-translate-y-0.5 transition-all [clip-path:polygon(3%_0,100%_4%,97%_100%,0_96%)]">Curated Favourites</a>
         <a href="#lightbox-gallery" class="shrink-0 whitespace-nowrap bg-terracotta text-white font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-slate md:hover:-translate-y-0.5 transition-all [clip-path:polygon(0_4%,97%_0,100%_96%,3%_100%)]">Lightbox Gallery</a>
         <a href="#rooms" class="shrink-0 whitespace-nowrap bg-blue-light text-white font-display font-bold text-[11px] sm:text-sm md:text-base px-3 py-1.5 sm:px-5 sm:py-2 border-2 border-slate shadow-[2px_2px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-blue-dark md:hover:-translate-y-0.5 transition-all [clip-path:polygon(0_4%,97%_0,100%_96%,3%_100%)]">15 Rooms</a>
     </nav>
@@ -146,6 +146,36 @@
                         <h4 class="font-display font-bold text-lg sm:text-xl mt-1.5 sm:mt-2">Tactile worlds</h4>
                         <p class="text-xs sm:text-sm mt-1.5 sm:mt-2 text-white/85 leading-relaxed">Artificial grass underfoot for his 1960s variations on Manet&rsquo;s <em>Le D&eacute;jeuner sur l&rsquo;herbe</em>, clashing vintage wallpapers for the 1912–14 Cubist collages, and walls flyposted with historic gallery posters.</p>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curated Favourites (Horizontal Carousel) -->
+        <div class="px-4 sm:px-6 md:px-16 lg:px-24 mb-3 sm:mb-4 relative z-20 flex flex-row items-end justify-between gap-3">
+            <div>
+                <h2 class="bg-terracotta text-white font-display font-bold text-xl sm:text-3xl md:text-4xl leading-none px-5 sm:px-9 py-3 sm:py-4 inline-flex items-center justify-center shadow-[4px_4px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">Curated Favourites</h2>
+                <p class="text-xs sm:text-sm mt-2.5 sm:mt-3 opacity-75">Swipe left or right to browse; tap any photo to open it full-screen.</p>
+            </div>
+            <button type="button" data-refresh-gallery class="shrink-0 bg-white text-slate font-display font-bold text-[11px] sm:text-xs uppercase tracking-widest px-3 sm:px-4 py-2 sm:py-2.5 border-2 border-slate shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-ochre transition-all">&#8635; Refresh</button>
+        </div>
+
+        <section id="gallery" class="relative flex flex-col justify-center bg-blue-dark pt-6 sm:pt-14 pb-8 sm:pb-16 px-0 sm:px-4 mt-4 sm:mt-8 mb-12 sm:mb-20 sm:min-h-[72vh] shadow-2xl [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] sm:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)]">
+            <div class="absolute bg-ochre w-[55vw] sm:w-[30vw] h-[110%] -top-[5%] left-[20vw] sm:left-[25vw] z-0 [clip-path:polygon(10%_0,100%_5%,90%_100%,0_95%)]"></div>
+
+            <!-- Left / Right floating carousel navigation buttons (desktop/tablet only so they don't cover photos on phones) -->
+            <button id="gallery-prev" type="button" aria-label="Scroll gallery left" class="hidden sm:flex absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 bg-ochre text-slate hover:bg-terracotta hover:text-white font-display font-extrabold text-3xl border-2 border-slate shadow-[5px_5px_0_#242526] transition-all hover:scale-110 active:scale-95 items-center justify-center [clip-path:polygon(6%_0,100%_4%,94%_100%,0_96%)]">&lsaquo;</button>
+            <button id="gallery-next" type="button" aria-label="Scroll gallery right" class="hidden sm:flex absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 bg-ochre text-slate hover:bg-terracotta hover:text-white font-display font-extrabold text-3xl border-2 border-slate shadow-[5px_5px_0_#242526] transition-all hover:scale-110 active:scale-95 items-center justify-center [clip-path:polygon(0_4%,94%_0,100%_96%,6%_100%)]">&rsaquo;</button>
+
+            <div id="gallery-container" class="relative z-10 w-full flex items-center gap-5 sm:gap-8 overflow-x-auto snap-x snap-mandatory px-[9vw] sm:px-[7vw] py-6 sm:py-12 my-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                <p id="gallery-status" class="text-white font-display text-xl">Loading gallery&hellip;</p>
+            </div>
+
+            <!-- Lifted bottom navigation bar -->
+            <div class="relative z-20 mt-1 sm:mt-2 mb-1 sm:mb-3 flex items-center justify-center px-3">
+                <div class="inline-flex items-center gap-3 sm:gap-5 bg-slate/90 backdrop-blur-sm px-3.5 sm:px-4 py-2 border-2 border-white/25 shadow-[4px_4px_0_rgba(0,0,0,0.4)]">
+                    <button type="button" data-gallery-dir="-1" class="bg-ochre text-slate active:bg-terracotta active:text-white sm:hover:bg-terracotta sm:hover:text-white font-display font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 border border-slate transition-colors">&larr; Prev</button>
+                    <span class="text-canvas font-display text-[11px] sm:text-sm tracking-widest uppercase">Swipe or tap</span>
+                    <button type="button" data-gallery-dir="1" class="bg-ochre text-slate active:bg-terracotta active:text-white sm:hover:bg-terracotta sm:hover:text-white font-display font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 border border-slate transition-colors">Next &rarr;</button>
                 </div>
             </div>
         </section>
@@ -291,35 +321,6 @@
                     </div>
 
                     <div id="ct-thumbs-grid" class="mt-4 sm:mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4"></div>
-                </div>
-            </div>
-        </section>
-
-        <div class="px-4 sm:px-6 md:px-16 lg:px-24 mb-3 sm:mb-4 relative z-20 flex flex-row items-end justify-between gap-3">
-            <div>
-                <h2 class="bg-terracotta text-white font-display font-bold text-xl sm:text-3xl md:text-4xl leading-none px-5 sm:px-9 py-3 sm:py-4 inline-flex items-center justify-center shadow-[4px_4px_0_#242526] sm:shadow-[6px_6px_0_#242526] [clip-path:polygon(0_0,100%_6%,96%_100%,3%_94%)]">Curated Favourites</h2>
-                <p class="text-xs sm:text-sm mt-2.5 sm:mt-3 opacity-75">Swipe left or right to browse; tap any photo to open it full-screen.</p>
-            </div>
-            <button type="button" data-refresh-gallery class="shrink-0 bg-white text-slate font-display font-bold text-[11px] sm:text-xs uppercase tracking-widest px-3 sm:px-4 py-2 sm:py-2.5 border-2 border-slate shadow-[3px_3px_0_#242526] sm:shadow-[4px_4px_0_#242526] hover:bg-ochre transition-all">&#8635; Refresh</button>
-        </div>
-
-        <section id="gallery" class="relative flex flex-col justify-center bg-blue-dark pt-6 sm:pt-14 pb-8 sm:pb-16 px-0 sm:px-4 mt-4 sm:mt-8 sm:min-h-[72vh] shadow-2xl [clip-path:polygon(0_1%,100%_0,100%_99%,0_100%)] sm:[clip-path:polygon(0_2%,100%_0,100%_98%,0_100%)]">
-            <div class="absolute bg-ochre w-[55vw] sm:w-[30vw] h-[110%] -top-[5%] left-[20vw] sm:left-[25vw] z-0 [clip-path:polygon(10%_0,100%_5%,90%_100%,0_95%)]"></div>
-
-            <!-- Left / Right floating carousel navigation buttons (desktop/tablet only so they don't cover photos on phones) -->
-            <button id="gallery-prev" type="button" aria-label="Scroll gallery left" class="hidden sm:flex absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 bg-ochre text-slate hover:bg-terracotta hover:text-white font-display font-extrabold text-3xl border-2 border-slate shadow-[5px_5px_0_#242526] transition-all hover:scale-110 active:scale-95 items-center justify-center [clip-path:polygon(6%_0,100%_4%,94%_100%,0_96%)]">&lsaquo;</button>
-            <button id="gallery-next" type="button" aria-label="Scroll gallery right" class="hidden sm:flex absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-14 md:h-14 bg-ochre text-slate hover:bg-terracotta hover:text-white font-display font-extrabold text-3xl border-2 border-slate shadow-[5px_5px_0_#242526] transition-all hover:scale-110 active:scale-95 items-center justify-center [clip-path:polygon(0_4%,94%_0,100%_96%,6%_100%)]">&rsaquo;</button>
-
-            <div id="gallery-container" class="relative z-10 w-full flex items-center gap-5 sm:gap-8 overflow-x-auto snap-x snap-mandatory px-[9vw] sm:px-[7vw] py-6 sm:py-12 my-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                <p id="gallery-status" class="text-white font-display text-xl">Loading gallery&hellip;</p>
-            </div>
-
-            <!-- Lifted bottom navigation bar -->
-            <div class="relative z-20 mt-1 sm:mt-2 mb-1 sm:mb-3 flex items-center justify-center px-3">
-                <div class="inline-flex items-center gap-3 sm:gap-5 bg-slate/90 backdrop-blur-sm px-3.5 sm:px-4 py-2 border-2 border-white/25 shadow-[4px_4px_0_rgba(0,0,0,0.4)]">
-                    <button type="button" data-gallery-dir="-1" class="bg-ochre text-slate active:bg-terracotta active:text-white sm:hover:bg-terracotta sm:hover:text-white font-display font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 border border-slate transition-colors">&larr; Prev</button>
-                    <span class="text-canvas font-display text-[11px] sm:text-sm tracking-widest uppercase">Swipe or tap</span>
-                    <button type="button" data-gallery-dir="1" class="bg-ochre text-slate active:bg-terracotta active:text-white sm:hover:bg-terracotta sm:hover:text-white font-display font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 border border-slate transition-colors">Next &rarr;</button>
                 </div>
             </div>
         </section>
